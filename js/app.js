@@ -1,14 +1,23 @@
 const container = document.querySelector(".container")
 const coffees = [
-  { name: "Perspiciatis", image: "images/coffee1.jpg" },
-  { name: "Voluptatem", image: "images/coffee2.jpg" },
-  { name: "Explicabo", image: "images/coffee3.jpg" },
-  { name: "Rchitecto", image: "images/coffee4.jpg" },
-  { name: " Beatae", image: "images/coffee5.jpg" },
-  { name: " Vitae", image: "images/coffee6.jpg" },
-  { name: "Inventore", image: "images/coffee7.jpg" },
-  { name: "Veritatis", image: "images/coffee8.jpg" },
-  { name: "Accusantium", image: "images/coffee9.jpg" },
+  { name: "Aiuegoxix", image: "images/monster1.png" },
+  { name: "Mhyvha", image: "images/monster2.png" },
+  { name: "Iuvriogg'zhi", image: "images/monster3.png" },
+  { name: "Vrugrox", image: "images/monster4.png" },
 ]
 
-console.log("connected");
+const showCoffees = () => {
+  let output = "";
+  coffees.forEach(({ name, image }) => {
+    output += `
+      <div class="card">
+      <img class="card--avatar" src=${image} />
+      <h2 class="card--title">${name}</h2>
+      <a class="card--link" href="#">Meet</a>
+      </div>
+    `;
+  });
+  container.innerHTML = output;
+}
+
+document.addEventListener("DOMContentLoaded", showCoffees);
